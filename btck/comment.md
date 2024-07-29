@@ -67,15 +67,15 @@ Khi host 1 trang web trên github, nó yêu cầu 1 directory có cấu trúc nh
 .
 └── tên website/
     ├── index.html
-    └── ... /*các 
-i
+    └── ... /*các file khác*/
 ```
-
+Github sẽ mặc định file `index.html` là home page. Do repo của em không đúng cấu trúc nên không host trên github được
 ## HTML
 Nội dung trong HTML không cần thay đổi nhiều. Chỉ cần thay đổi sau:
-
+- Header, footer nên tách ra 1 file riêng và gộp vào vì header và footer dùng chung giữa các trang, không nên copy paste.
+- `<header>` và `<nav>` nên tách ra, không nên để `<nav>` nằm trong `<header>`. `<header>` chứa logo và những thông tin liên quan. `<nav>` chứa cái navbar
 - Đường dẫn với link css và js lại theo cách tổ chức file như trên.
-- Các nút like, share, heart thì dùng material icon hay những thứ tương tự để load nhanh hơn [Material icon](https://fonts.google.com/icons?selected=Material+Symbols+Outlined:search:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%23e8eaed). Ví dụ:
+- Các nút like, share, heart thì dùng [Google Material icon](https://fonts.google.com/icons?selected=Material+Symbols+Outlined:search:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%23e8eaed) hay những font icon tương tự để load nhanh hơn.  Ví dụ:
 ```html
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
@@ -85,6 +85,7 @@ search
 ```
 
 ## CSS
+Các đoạn CSS giống nhau và dùng chung, em có thể tách ra làm 1 file thay vì copy paste vào từng file
 
 ## JS
 Nên để đoạn code JS trong một file riêng. Các đoạn code em dùng đều giống nhau nên thay vì copy thì để trong 1 file riêng, dễ debug và mở rộng hơn.
